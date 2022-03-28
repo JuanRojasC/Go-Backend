@@ -37,7 +37,7 @@ func main() {
 	// Declare with elements
 	var mapStudents = map[string]int{"Benjamin": 20, "Nahuel": 26}
 	fmt.Println(mapStudents["Benjamin"])
-	
+
 	// New Key-Value
 	mapStudents["Brenda"] = 19
 
@@ -47,11 +47,11 @@ func main() {
 	// Delete Key-Values
 	delete(mapStudents, "Benjamin")
 
-	// For Maps
+	// For Maps key
+	// For Arr or Slice Index
 	for key, element := range mapStudents {
 		fmt.Println("Key:", key, "=>", "Element:", element)
 	}
-
 
 	// FOR
 	// Standar For
@@ -71,7 +71,7 @@ func main() {
 	for {
 		sum1++
 		if sum1 == 10 {
-			break;
+			break
 		}
 	}
 
@@ -96,7 +96,7 @@ func main() {
 
 	if edad := 20; edad > 50 {
 
-	} else if edad >= 18{
+	} else if edad >= 18 {
 
 	} else {
 
