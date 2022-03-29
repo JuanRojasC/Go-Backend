@@ -1,7 +1,9 @@
 package main
 
 import (
+	"errors"
 	. "fmt"
+	"log"
 	"strings"
 )
 
@@ -21,14 +23,18 @@ type Matrix struct {
 	MaxValue float64
 }
 
-func (m *Matrix) Set(values ...[]float64) {
+func (m *Matrix) Set(values ...[]float64) error {
 	m.Values = values
 	m.MaxNumber()
-	if len(values) == len(values[0]) {
-		m.Square = true
-	} else {
-		m.Square = false
+	consistentRows := values[0]
+	for _, row := range values {
+		if len(row) != len(consistentRows) {
+			m.Square = false
+			return errors.New(Sprintf("Matrix must be have %d rows and %d columns for each rows", m.Rows, m.Columns))
+		}
 	}
+	m.Square = true
+	return nil
 }
 
 func (m Matrix) Print() {
@@ -70,16 +76,24 @@ func (m *Matrix) MaxNumber() {
 	m.MaxValue = maxNumber
 }
 
+func newMatrix(rows int, columns int) Matrix {
+	return Matrix{Rows: rows, Columns: columns}
+}
+
 func main() {
 	values := [][]float64{{1, 2, 3, 4, 5}, {5, 4, 3, 2, 1}}
-	m1 := Matrix{values, 2, 5, false, 5}
+	m1 := newMatrix(len(values), len(values[0]))
+	ok := m1.Set(values...)
+	if ok != nil {
+		log.Fatal(ok)
+	}
 	m1.Print()
 
 	values2 := [][]float64{{1, 2, 3, 4, 5, 6}, {7, 8, 9, 10, 11, 12}, {5, 7, 3, 8, 6, 3}, {45, 76, 23, 58, 336, 76}}
-	m2 := Matrix{
-		Rows:    len(values2),
-		Columns: len(values2[0]),
+	m2 := newMatrix(len(values2), len(values2[0]))
+	ok2 := m2.Set(values2...)
+	if ok != nil {
+		log.Fatal(ok2)
 	}
-	m2.Set(values2...)
 	m2.Print()
 }

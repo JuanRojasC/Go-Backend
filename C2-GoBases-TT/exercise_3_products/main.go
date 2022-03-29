@@ -30,12 +30,14 @@ Interface Ecommerce:
 
 // INTERFACES
 type Product interface {
-	CalculateCost()
+	CalculateCost() float64
+	GetPrice() float64
+	GetName() string
 }
 
 type Ecommerce interface {
-	Total()
-	Add()
+	Total() float64
+	Add(p product)
 }
 
 // PRODUCT
@@ -43,6 +45,14 @@ type product struct {
 	kind  string
 	name  string
 	price float64
+}
+
+func (p product) GetPrice() float64 {
+	return p.price
+}
+
+func (p product) GetName() string {
+	return p.name
 }
 
 func (p product) CalculateCost() float64 {
@@ -58,28 +68,28 @@ func (p product) CalculateCost() float64 {
 	}
 }
 
-func newProduct(name string, price float64, kind string) product {
+func newProduct(name string, price float64, kind string) Product {
 	return product{kind, name, price}
 }
 
-func newStore(products ...product) store {
+func newStore(products ...Product) store {
 	return store{products}
 }
 
 // STORES
 type store struct {
-	products []product
+	products []Product
 }
 
 func (s store) Total() float64 {
 	var total float64 = 0
 	for _, v := range s.products {
-		total += (v.price + v.CalculateCost())
+		total += (v.GetPrice() + v.CalculateCost())
 	}
 	return total
 }
 
-func (s store) Add(p product) {
+func (s store) Add(p Product) {
 	s.products = append(s.products, p)
 }
 
@@ -93,7 +103,7 @@ func main() {
 	store := newStore(p1, p2, p3, p4)
 
 	for _, v := range store.products {
-		Printf("%s: %.2f\n", v.name, v.price+v.CalculateCost())
+		Printf("%s: %.2f\n", v.GetName(), v.GetPrice()+v.CalculateCost())
 	}
 
 	Printf("Coste total: %.2f", store.Total())
