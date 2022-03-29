@@ -7,4 +7,5 @@
 <strong>Class 2</strong>
 <ul>
   <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C2-GoBases-TM">Functions in Go</a></li>
+  <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C2-GoBases-TT">Interfaces and Structures in Go</a></li>
 </ul>
