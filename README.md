@@ -14,4 +14,7 @@
   <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C3-GoBases-TM">Go Packages OS/IO</a></li>
   <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C3-GoBases-TT">Pointers, Goroutines and Channels in Go</a></li>
 </ul>
-
+<strong>Class 4</strong>
+<ul>
+  <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C4-GoBases-TM">Errors in GO</a></li>
+</ul>
