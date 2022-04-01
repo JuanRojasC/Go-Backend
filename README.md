@@ -1,4 +1,5 @@
 # Bootcamp GO
+<h2>Intro</h2>
 <strong>Class 1</strong>
 <ul>
   <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C1-GoBases-TM">Intro to Go Language</a></li>
@@ -19,7 +20,8 @@
   <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C4-GoBases-TM">Errors in GO</a></li>
   <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C4-GoBases-TT">Panic, Defer, Recover and Context in Go</a></li>
 </ul>
-<strong>Class 5</strong>
+<h2>Web</h2>
+<strong>Class 6</strong>
 <ul>
-  <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C5-GoBases-Review">Review</a></li>
+  <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C6-GoWeb-TM">Intro to Gin</a></li>
 </ul>
