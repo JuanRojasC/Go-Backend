@@ -19,3 +19,7 @@
   <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C4-GoBases-TM">Errors in GO</a></li>
   <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C4-GoBases-TT">Panic, Defer, Recover and Context in Go</a></li>
 </ul>
+<strong>Class 5</strong>
+<ul>
+  <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C5-GoBases-Review">Review</a></li>
+</ul>
