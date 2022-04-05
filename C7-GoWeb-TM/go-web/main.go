@@ -71,14 +71,14 @@ func validateFields(p product) error {
 
 // MODEL
 type product struct {
-	Id          int     `json:"id"`
-	Name        string  `json:"nombre" binding:"required"`
-	Color       string  `json:"color" binding:"required"`
-	Price       float64 `json:"precio" binding:"required"`
-	Stock       float64 `json:"stock" binding:"required"`
-	Code        string  `json:"codigo" binding:"required"`
-	Published   bool    `json:"publicado" binding:"required"`
-	CreatedDate string  `json:"fecha_creacion" binding:"required"`
+	Id          int      `json:"id"`
+	Name        string   `json:"nombre" binding:"required"`
+	Color       string   `json:"color" binding:"required"`
+	Price       float64  `json:"precio" binding:"required"`
+	Stock       *float64 `json:"stock" binding:"required"`
+	Code        string   `json:"codigo" binding:"required"`
+	Published   *bool    `json:"publicado" binding:"required"`
+	CreatedDate string   `json:"fecha_creacion" binding:"required"`
 }
 
 // GetAll
