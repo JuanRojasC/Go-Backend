@@ -26,3 +26,7 @@
   <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C6-GoWeb-TM">Intro to Gin</a></li>
   <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C6-GoWeb-TT">Routes, Params and Queries in Gin</a></li>
 </ul>
+<strong>Class 7</strong>
+<ul>
+  <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C7-GoWeb-TM">Post Method and Headers with Gin</a></li>
+</ul>
