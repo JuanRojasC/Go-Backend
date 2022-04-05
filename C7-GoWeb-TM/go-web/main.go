@@ -57,7 +57,7 @@ func validateFields(p product) error {
 	if p.Price == 0 {
 		return Errorf("El campo %s es requerido", "precio")
 	}
-	if p.Stock == 0 {
+	if p.Stock == nil {
 		return Errorf("El campo %s es requerido", "stock")
 	}
 	if p.Code == "" {
