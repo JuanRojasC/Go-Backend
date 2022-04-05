@@ -24,4 +24,5 @@
 <strong>Class 6</strong>
 <ul>
   <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C6-GoWeb-TM">Intro to Gin</a></li>
+  <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C6-GoWeb-TT">Routes, Params and Queries in Gin</a></li>
 </ul>
