@@ -29,4 +29,5 @@
 <strong>Class 7</strong>
 <ul>
   <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C7-GoWeb-TM">Post Method and Headers with Gin</a></li>
+  <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C7-GoWeb-TT">Folders Structure</a></li>
 </ul>
