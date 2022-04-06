@@ -34,4 +34,5 @@
 <strong>Class 8</strong>
 <ul>
   <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C8-GoWeb-TM">PUT, PATCH and DELETE Methods</a></li>
+  <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C8-GoWeb-TT">Package Store</a></li>
 </ul>
