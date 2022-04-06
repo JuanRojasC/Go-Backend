@@ -40,6 +40,9 @@ const TOKEN = "KJJFJSD7594"
 func (ph *ProductHandler) GetAll() gin.HandlerFunc {
 	return func(ctx *gin.Context) {
 		all, err := ph.service.GetAll()
+		if !ph.AuthToken(ctx) {
+			return
+		}
 		if err != nil {
 			ctx.JSON(http.StatusNotFound, gin.H{
 				"error": err.Error(),
@@ -54,7 +57,7 @@ func (ph *ProductHandler) GetAll() gin.HandlerFunc {
 func (ph *ProductHandler) GetOne() gin.HandlerFunc {
 	return func(ctx *gin.Context) {
 		id := ph.ValidateIntParam(ctx.Param("id"), ctx)
-		if id == 0 {
+		if id == 0 || !ph.AuthToken(ctx) {
 			return
 		}
 		p, err := ph.service.GetOne(id)
@@ -73,7 +76,7 @@ func (ph *ProductHandler) GetOne() gin.HandlerFunc {
 func (ph *ProductHandler) Save() gin.HandlerFunc {
 	return func(ctx *gin.Context) {
 		var req *fullRequest
-		if !ph.JSONToStruct(&req, ctx) {
+		if !ph.JSONToStruct(&req, ctx) || !ph.AuthToken(ctx) {
 			return
 		}
 		p, err := ph.service.Save(req.Name, req.Color, req.Price, *req.Stock, req.Code, *req.Published)
@@ -90,7 +93,7 @@ func (ph *ProductHandler) Update() gin.HandlerFunc {
 	return func(ctx *gin.Context) {
 		var req *fullRequest
 		id := ph.ValidateIntParam(ctx.Param("id"), ctx)
-		if id == 0 || !ph.JSONToStruct(&req, ctx) {
+		if id == 0 || !ph.JSONToStruct(&req, ctx) || !ph.AuthToken(ctx) {
 			return
 		}
 		p, err := ph.service.Update(id, req.Name, req.Color, req.Price, *req.Stock, req.Code, *req.Published)
@@ -107,13 +110,13 @@ func (ph *ProductHandler) Patch() gin.HandlerFunc {
 	return func(ctx *gin.Context) {
 		id := ph.ValidateIntParam(ctx.Param("id"), ctx)
 		var req *patchRequest
-		if id == 0 || !ph.JSONToStruct(&req, ctx) {
+		if id == 0 || !ph.JSONToStruct(&req, ctx) || !ph.AuthToken(ctx) {
 			return
 		}
 
 		var errs []error
-		var p interface{}
-		trySetProperty := func(pUpdated interface{}, err error) {
+		var p products.Product
+		trySetProperty := func(pUpdated products.Product, err error) {
 			if err != nil {
 				errs = append(errs, err)
 			} else {
@@ -133,7 +136,7 @@ func (ph *ProductHandler) Patch() gin.HandlerFunc {
 				"product": p,
 				"errors":  errs,
 			})
-		} else if p == nil {
+		} else if p == (products.Product{}) {
 			ctx.JSON(http.StatusOK, "nothing modified")
 		} else {
 			ctx.JSON(http.StatusOK, p)
@@ -145,7 +148,7 @@ func (ph *ProductHandler) Patch() gin.HandlerFunc {
 func (ph *ProductHandler) Delete() gin.HandlerFunc {
 	return func(ctx *gin.Context) {
 		id := ph.ValidateIntParam(ctx.Param("id"), ctx)
-		if id == 0 {
+		if id == 0 || !ph.AuthToken(ctx) {
 			return
 		}
 		if err := ph.service.Delete(id); err != nil {
@@ -157,13 +160,13 @@ func (ph *ProductHandler) Delete() gin.HandlerFunc {
 }
 
 // Validate token
-func (ph *ProductHandler) AuthToken() gin.HandlerFunc {
-	return func(ctx *gin.Context) {
-		token := ctx.Request.Header.Get("token")
-		if token != TOKEN {
-			ctx.JSON(http.StatusUnauthorized, gin.H{"error": "invalid token"})
-		}
+func (ph *ProductHandler) AuthToken(ctx *gin.Context) bool {
+	token := ctx.Request.Header.Get("token")
+	if token != TOKEN {
+		ctx.JSON(http.StatusUnauthorized, gin.H{"error": "invalid token"})
+		return false
 	}
+	return true
 }
 
 // Use ShouldBindJSON, abstract the conversion returning a bool and setting in context the error if can not do it
