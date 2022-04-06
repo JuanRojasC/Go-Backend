@@ -36,3 +36,7 @@
   <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C8-GoWeb-TM">PUT, PATCH and DELETE Methods</a></li>
   <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C8-GoWeb-TT">Package Store</a></li>
 </ul>
+<strong>Class 9</strong>
+<ul>
+  <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C9-GoWeb-TM">Fields Validation and Generic Responses</a></li>
+</ul>
