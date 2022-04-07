@@ -1,6 +1,6 @@
 # Project Structure in Golang
 
-<h2 style="color:green">MVC Pattern</h2>
+## MVC Pattern
 
 ### Controller
 
@@ -14,7 +14,7 @@
 
 * Se encarga de abstraer el acceso a los datos, siendo el encargado de interactuar con la base de datos o sistema de persistencia de datos.
 
-<h2 style="color:blue">Project Structure</h2>
+## Project Structure
 
 ### Layer
 
@@ -49,7 +49,7 @@ productos
     servicio.go
 ```
 
-<h2 style="color:purple">Packages Structure</h2>
+## Packages Structure
 
 Organización de las carpetas en un proyecto golang.
 
