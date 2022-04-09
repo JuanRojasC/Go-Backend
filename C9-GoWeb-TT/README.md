@@ -11,7 +11,7 @@ Es una pieza básica para el mantenimiento y escalabilidad de un proyecto.
 
 Swagger es una herramienta útil para describir, producti, cosumir y visualizar APIs RESTful.
 
-#### Package swaggo
+### Package swaggo
 
 #### install
 
@@ -44,9 +44,9 @@ docs.SwaggerInfo.Host = os.Getenv("HOST")
 r.GET("/docs/*any", ginSwagger.WrapHandler(swaggerFiler.Handler))
 ```
 
-#### Annotations
+### Annotations
 
-##### Main
+#### Main
 
 ```go
 // @title Bootcamp API
@@ -60,7 +60,7 @@ r.GET("/docs/*any", ginSwagger.WrapHandler(swaggerFiler.Handler))
 func main() {}
 ```
 
-##### Endpoints
+#### Endpoints
 
 ```go
 // SaveProduct godoc
