@@ -39,4 +39,5 @@
 <strong>Class 9</strong>
 <ul>
   <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C9-GoWeb-TM">Fields Validation and Generic Responses</a></li>
+  <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C9-GoWeb-TT">API Documentation & Middlewares</a></li>
 </ul>
