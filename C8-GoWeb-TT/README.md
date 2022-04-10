@@ -18,3 +18,21 @@ Siempre retorna el valor de la variable como una string y al momento de ejecutar
 go run main. go -> same level to main file
 go run cmd/server/main.go -> same level to cmd dir
 ```
+
+### Code Example
+
+```go
+package main
+
+import (
+    "os"
+    "github.com/joho/godotenv"
+)
+
+func main() {
+    if err := godotenv.Load(); err != nil {
+        log.Fatal(err)
+    }
+    myEnvVar := os.Getenv("MY_VAR")
+}
+```
