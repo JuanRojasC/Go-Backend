@@ -45,4 +45,5 @@
 <strong>Class 10</strong>
 <ul>
   <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C10-Testing-TM">Testing</a></li>
+  <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C10-Testing-TT">Package testing and testify</a></li>
 </ul>
