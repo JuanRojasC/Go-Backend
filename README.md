@@ -41,3 +41,7 @@
   <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C9-GoWeb-TM">Fields Validation and Generic Responses</a></li>
   <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C9-GoWeb-TT">API Documentation & Middlewares</a></li>
 </ul>
+<strong>Class 10</strong>
+<ul>
+  <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C10-Testing-TM">Testing</a></li>
+</ul>
