@@ -47,3 +47,7 @@
   <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C10-Testing-TM">Testing</a></li>
   <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C10-Testing-TT">Package testing and testify</a></li>
 </ul>
+<strong>Class 11</strong>
+<ul>
+  <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C11-Testing-TM">Doubles Tests</a></li>
+</ul>
