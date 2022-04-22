@@ -50,4 +50,5 @@
 <strong>Class 11</strong>
 <ul>
   <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C11-Testing-TM">Doubles Tests</a></li>
+  <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C11-Testing-TT">Integration Test</a></li>
 </ul>
