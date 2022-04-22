@@ -17,8 +17,10 @@ type StubStore struct {
 }
 
 func (s *StubStore) Read(data interface{}) error {
-	products = []Product{
+	products := data.(*[]Product)
+	*products = []Product{
 		{1, "Test 1", "Color", 0.0, 0.0, "SDJF454", false, "21/04/2022"},
+		{2, "Before Update", "Color", 0.0, 0.0, "JKJ29040", true, "21/04/2022"},
 	}
 	s.callReadMethod = true
 	return nil
