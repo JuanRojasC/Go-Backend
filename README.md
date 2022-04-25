@@ -55,4 +55,5 @@
 <strong>Class 12</strong>
 <ul>
   <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C12-Testing-TM">Golangci-lint and Code Coverage</a></li>
+  <li><a href="https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C12-Testing-TT">Functional Tests and TDD</a></li>
 </ul>
