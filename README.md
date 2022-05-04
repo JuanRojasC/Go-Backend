@@ -70,4 +70,9 @@
 
 ### Class 14
 
-* [SQL II](https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C14-SQL-TM)
+* [SQL II - JOINS](https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C14-SQL-TM)
+* [SQL II - CRUD](https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C14-SQL-TT)
+
+### Class 15
+
+* [NoSQL](https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C15-NoSQL-TM)
