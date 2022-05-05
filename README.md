@@ -75,4 +75,5 @@
 
 ### Class 15
 
-* [NoSQL](https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C15-NoSQL-TM)
+* [NoSQL - Basico](https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C15-NoSQL-TM)
+* [NoSQL - Replicación](https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C15-NoSQL-TT)
