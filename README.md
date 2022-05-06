@@ -81,3 +81,7 @@
 ### Class 16
 
 * [Storage Implementation - INSERT/GET](https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C16-GoSQL-TT)
+
+### Class 17
+
+* [Storage Implementation - UPDATE/PATCH](https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C17-GoSQL-TM)
