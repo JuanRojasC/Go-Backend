@@ -77,3 +77,7 @@
 
 * [NoSQL - Basico](https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C15-NoSQL-TM)
 * [NoSQL - Replicación](https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C15-NoSQL-TT)
+
+### Class 16
+
+* [Storage Implementation - INSERT/GET](https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C16-GoSQL-TT)

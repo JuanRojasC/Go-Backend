@@ -1,0 +1,277 @@
+definitions:
+  handler.fullRequest:
+    properties:
+      codigo:
+        type: string
+      color:
+        type: string
+      nombre:
+        type: string
+      precio:
+        type: number
+      publicado:
+        type: boolean
+      stock:
+        type: number
+    required:
+    - codigo
+    - color
+    - nombre
+    - precio
+    - publicado
+    - stock
+    type: object
+  handler.patchRequest:
+    properties:
+      codigo:
+        type: string
+      color:
+        type: string
+      nombre:
+        type: string
+      precio:
+        type: number
+      publicado:
+        type: boolean
+      stock:
+        type: number
+    type: object
+  web.Response:
+    properties:
+      data: {}
+      error:
+        type: string
+      status:
+        type: integer
+    type: object
+info:
+  contact: {}
+  description: This API Handle Products
+  license:
+    name: Apache 2.0
+    url: https://apache.org/licenses/LICENSE-2.0.html
+  title: MELI Bootcamp API
+  version: "1.0"
+paths:
+  /products:
+    get:
+      description: get all products available
+      parameters:
+      - description: token
+        in: header
+        name: token
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.Response'
+        "401":
+          description: Invalid Token
+          schema:
+            $ref: '#/definitions/web.Response'
+      summary: List products
+      tags:
+      - Products
+    post:
+      consumes:
+      - application/json
+      description: Save a new product
+      parameters:
+      - description: token
+        in: header
+        name: token
+        required: true
+        type: string
+      - description: Product to Save
+        in: body
+        name: product
+        required: true
+        schema:
+          $ref: '#/definitions/handler.fullRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.Response'
+        "401":
+          description: Invalid Token
+          schema:
+            $ref: '#/definitions/web.Response'
+        "422":
+          description: Body malformed
+          schema:
+            $ref: '#/definitions/web.Response'
+      summary: Save a new product
+      tags:
+      - Products
+  /products/:id:
+    delete:
+      description: Delete a product existing
+      parameters:
+      - description: token
+        in: header
+        name: token
+        required: true
+        type: string
+      - description: Product ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.Response'
+        "400":
+          description: Param ID is not an integer
+          schema:
+            $ref: '#/definitions/web.Response'
+        "401":
+          description: Invalid Token
+          schema:
+            $ref: '#/definitions/web.Response'
+        "404":
+          description: Resource not found
+          schema:
+            $ref: '#/definitions/web.Response'
+      summary: Delete a product existing
+      tags:
+      - Products
+    get:
+      consumes:
+      - application/json
+      description: get product by id
+      parameters:
+      - description: token
+        in: header
+        name: token
+        required: true
+        type: string
+      - description: Product ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.Response'
+        "400":
+          description: Param ID is not an integer
+          schema:
+            $ref: '#/definitions/web.Response'
+        "401":
+          description: Invalid Token
+          schema:
+            $ref: '#/definitions/web.Response'
+        "404":
+          description: Resource not found
+          schema:
+            $ref: '#/definitions/web.Response'
+      summary: Product by id
+      tags:
+      - Products
+    patch:
+      consumes:
+      - application/json
+      description: Patch one or many product's properties
+      parameters:
+      - description: token
+        in: header
+        name: token
+        required: true
+        type: string
+      - description: Product ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Product properties to Update
+        in: body
+        name: product
+        schema:
+          $ref: '#/definitions/handler.patchRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.Response'
+        "400":
+          description: Param ID is not an integer
+          schema:
+            $ref: '#/definitions/web.Response'
+        "401":
+          description: Invalid Token
+          schema:
+            $ref: '#/definitions/web.Response'
+        "404":
+          description: Resource not found
+          schema:
+            $ref: '#/definitions/web.Response'
+        "422":
+          description: Body malformed
+          schema:
+            $ref: '#/definitions/web.Response'
+      summary: Patch one or many product's properties
+      tags:
+      - Products
+    put:
+      consumes:
+      - application/json
+      description: Update product existing
+      parameters:
+      - description: token
+        in: header
+        name: token
+        required: true
+        type: string
+      - description: Product ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Product to Update
+        in: body
+        name: product
+        required: true
+        schema:
+          $ref: '#/definitions/handler.fullRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.Response'
+        "400":
+          description: Param ID is not an integer
+          schema:
+            $ref: '#/definitions/web.Response'
+        "401":
+          description: Invalid Token
+          schema:
+            $ref: '#/definitions/web.Response'
+        "404":
+          description: Resource not found
+          schema:
+            $ref: '#/definitions/web.Response'
+        "422":
+          description: Body malformed
+          schema:
+            $ref: '#/definitions/web.Response'
+      summary: Update product existing
+      tags:
+      - Products
+swagger: "2.0"
