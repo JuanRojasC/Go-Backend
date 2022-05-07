@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "nombre":"MacBook Pro",
+        "color":"gray",
+        "precio":989,
+        "stock":134,
+        "codigo":"8977JNFJKD",
+        "publicado":true,
+        "fecha_creacion":"2022-10-05 20:29:00"
+    },
+    {
+        "id":2,
+        "nombre":"iPhone",
+        "color":"gray",
+        "precio":1145,
+        "stock":67,
+        "codigo":"949JJ54LF",
+        "publicado":true,
+        "fecha_creacion":"2022-10-05 20:29:00"
+    },
+    {
+        "id":3,
+        "nombre":"Magic Mouse",
+        "color":"white",
+        "precio":79.99,
+        "stock":96,
+        "codigo":"JFOVN405",
+        "publicado":true,
+        "fecha_creacion":"2022-10-05 20:29:00"
+    }
+]

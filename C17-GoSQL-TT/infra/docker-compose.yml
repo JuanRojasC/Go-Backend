@@ -1,0 +1,12 @@
+services:
+  mysql:
+    container_name: mysql-products-db
+    image: bitnami/mysql:latest
+    ports:
+      - 3306:3306
+    environment:
+      - TZ="UTC"
+      - MYSQL_ROOT_PASSWORD=root
+      - BITNAMI_DEBUG="true"
+    volumes:
+      - ./products-db.sql:/docker-entrypoint-initdb.d/init.sql

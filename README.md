@@ -85,3 +85,4 @@
 ### Class 17
 
 * [Storage Implementation - UPDATE/PATCH](https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C17-GoSQL-TM)
+* [Storage Implementation - Testing](https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C17-GoSQL-TT)
