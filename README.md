@@ -61,7 +61,7 @@
 * [Golangci-lint and Code Coverage](https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C12-Testing-TM)
 * [Functional Tests and TDD](https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C12-Testing-TT)
 
-## SQL
+## Storage Implementation
 
 ### Class 13
 

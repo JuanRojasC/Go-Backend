@@ -50,7 +50,7 @@ func TestRepositoryGetWithTimeout(t *testing.T) {
 
     resultId := 1
     columns := []string{"id", "name", "price"}
-    rows := sqlmock.NewRows(columns, resultId, "shirt", 1034.46)
+    rows := sqlmock.NewRows(columns)
     rows.AddRow(resultId, "shirt", 100.15)
     mock.ExpectQuery("SELECT id, name, price").WillDelayFor(30 * time.Second).WillReturnRows(rows)
 
