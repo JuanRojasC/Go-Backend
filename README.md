@@ -86,3 +86,7 @@
 
 * [Storage Implementation - UPDATE/PATCH](https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C17-GoSQL-TM)
 * [Storage Implementation - Testing](https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C17-GoSQL-TT)
+
+### Class 18
+
+* [Storage Implementation - DynamoDB](https://github.com/JuanDRojasC/Bootcamp-GO/tree/master/C18-GoNoSQL-TM)
